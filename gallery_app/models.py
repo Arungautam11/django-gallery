@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import mark_safe
+from embed_video.fields import EmbedVideoField
 
 # Gallery Category Model
 class Gallery(models.Model):
@@ -25,3 +26,16 @@ class GalleryImage(models.Model):
 
 	def image_tag(self):
 		return mark_safe('<img src="%s" width="80" />' % (self.img.url))
+
+
+# Youtube embedded video
+
+class Item(models.Model):
+    video_title = models.CharField(max_length=255, null=True, blank=True)
+    video = EmbedVideoField()  # same like models.URLField()
+    added_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    is_active = models.BooleanField(default=True,)
+
+
+    def __str__(self):
+        return self.video_title
