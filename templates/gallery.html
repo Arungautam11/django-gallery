@@ -1,3 +1,4 @@
+{% load embed_video_tags %}
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -11,9 +12,29 @@
     </head>
     <body>
 
+
+    	<section>
+		    <div class="inline-flex-container" style="text-align: center;">
+		        <br />
+		        <h2 class="text-center pb-1 mb-0">
+		            <span style="color: #07baa1; font-family: 'Ubuntu';">Video PetriMed</span><span style="color: #e17570; font-size: 80%; font-family: 'Ubuntu';"> CA</span>
+		            <sup style="font-size: 10px; vertical-align: super; margin: -12px; color: #000; position: relative; top: -9px; font-family: 'Ubuntu';">TM</sup>
+		        </h2>
+		        <br />
+		        {% for item in obj %}
+		        {% video item.video '360x215' %}
+		        {% endfor %}
+		    </div>
+		    <br />
+		</section>
+
         <!-- Services -->
-        <section class="container my-4">
-            <h1 class="text-center mb-4 section-heading border-bottom pb-2" style="font-size:50px;font-weight: bold;color: #07baa1;">Gallery</h1>
+        <section class="container my-4s">
+            <!-- <h1 class="text-center mb-4 section-heading border-bottom pb-2" style="font-size:50px;font-weight: bold;color: #07baa1;">Gallery</h1> -->
+            <h2 class="text-center pb-1 mb-0">
+		            <span style="color: #07baa1; font-family: 'Ubuntu';">Gallery PetriMed</span><span style="color: #e17570; font-size: 80%; font-family: 'Ubuntu';"> CA</span>
+		            <sup style="font-size: 10px; vertical-align: super; margin: -12px; color: #000; position: relative; top: -9px; font-family: 'Ubuntu';">TM</sup>
+		        </h2>
             <div class="row">
                 {% for gallery in gallerys %}
                 <div class="col-md-4 mb-4">
