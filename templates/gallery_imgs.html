@@ -16,16 +16,14 @@
    </head>
 
    <style type="text/css">
-    	.gallery-block.cards-gallery .card{transition: 0.4s easy;}
-		.gallery-block.cards-gallery .card img{box-shadow: 0px 2px 10px rgba(0,0,0,0.15);}
-
-		@media (min-width: 576px) {
-
-			.gallery-block .transform-on-hover:hover {
-			    transform: translateY(-10px) scale(1.02);
-			    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-			}
-		}
+      .card-img-top {
+         transition: transform 0.4s ease-in-out;
+       }
+       
+       .card-img-top:hover {
+         transform: scale(1.06);
+       }
+       
     </style>
 
    <body>
